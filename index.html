@@ -16,7 +16,7 @@
 <body class="bg-black text-white flex justify-center min-h-screen">
     <div class="w-full bg-black max-w-[500px] p-6 flex flex-col items-center text-center space-y-8">
         <!-- Top Header -->
-        <h1 class="text-4xl tracking-[15px] mt-10 pl-[15px]">PRONATIUX</h1>
+        <h1 class="text-2xl tracking-[15px] mt-10 pl-[15px]">PRONATIUX</h1>
         <!-- Content -->
         <div class="space-y-6 text-md leading-relaxed text-white">
             <p>
@@ -56,7 +56,7 @@
             </a>
         </div>
 
-        <h1 class="text-[9px] tracking-[8px] my-10 pl-[8px]">SELECT BEST ADULT CONTENT</h1>
+        <h1 class="text-[7px] tracking-[8px] my-10 pl-[8px]">SELECT BEST ADULT CONTENT</h1>
     </div>
 </body>
 
