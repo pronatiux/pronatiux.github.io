@@ -56,7 +56,7 @@
             </a>
         </div>
 
-        <h1 class="text-[7px] tracking-[8px] my-10 pl-[8px]">SELECT BEST ADULT CONTENT</h1>
+        <h1 class="text-[7px] tracking-[5px] my-10 pl-[5px]">SELECT BEST ADULT CONTENT</h1>
     </div>
 </body>
 
