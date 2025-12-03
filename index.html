@@ -7,13 +7,42 @@
     <title>Pronatiux</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        @font-face {
+            font-family: 'pronatiux';
+            src: url('https://cdn.jsdelivr.net/gh/pronatiux/pronatiux/font.woff2') format('woff2');
+        }
+
+        * {
+            font-family: 'pronatiux', sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'pronatiux', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
 
 <body class="bg-black text-white flex justify-center min-h-screen">
+    <script>
+        async function loadFontAndShow() {
+            const fontUrl = 'https://cdn.jsdelivr.net/gh/pronatiux/pronatiux/font.woff2';
+            const font = new FontFace('pronatiux', `url(${fontUrl})`);
+
+            try {
+                const loadedFont = await font.load();
+                document.fonts.add(loadedFont);
+                document.body.style.opacity = '1';
+            } catch (error) {
+                console.error('Font loading failed:', error);
+                document.body.style.opacity = '1';
+            }
+        }
+
+        loadFontAndShow();
+    </script>
+
     <div class="w-full bg-black max-w-[500px] p-6 flex flex-col items-center text-center space-y-8">
         <!-- Top Header -->
         <h1 class="text-2xl tracking-[15px] mt-10 pl-[15px]">PRONATIUX</h1>
@@ -42,16 +71,15 @@
 
         <!-- Buttons -->
         <div class="flex flex-col w-full gap-4">
-            <a href="https://x.com/pronatiux"
-                class="block w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition">
+            <a href="https://x.com/pronatiux" class="block w-full bg-white text-black font-bold py-3 rounded-full">
                 X (Twitter)
             </a>
             <a href="https://www.instagram.com/pronatiux/"
-                class="block w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition">
+                class="block w-full bg-white text-black font-bold py-3 rounded-full">
                 Instagram
             </a>
             <a href="mailto:pronatiux@protonmail.com"
-                class="block w-full bg-white text-black font-bold py-3 rounded-full hover:bg-gray-200 transition">
+                class="block w-full bg-white text-black font-bold py-3 rounded-full">
                 pronatiux@protonmail.com
             </a>
         </div>
